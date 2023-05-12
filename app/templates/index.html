@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Judul Halaman -->
+	<title>Asimo 1</title>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Icon -->
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href={{ url_for('static', filename='/css/bootstrap.min.css') }} type="text/css">
+	<link rel="stylesheet" href={{ url_for('static', filename='/css/client_side.css') }}  type="text/css">
+	
+	<!-- JavaScript -->
+	<script src={{ url_for('static', filename='/js/jquery_3.6.0.min.js') }} ></script>
+	<script src={{ url_for('static', filename='/js/bootstrap.js') }} ></script>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Sweet Alert -->
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body id="halamanku" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+	<!-- Navigation Bar -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			
+			<!-- Logo -->
+			<div class="navbar-header">
+				
+				<!-- <img src={{ url_for('static', filename='/images/orbit_logo.jpg') }} alt="Orbit Logo" 
+				width="80" height="80" align="left"> -->
+				<a class="navbar-brand" href="#halamanku">&#160;A S I M O &ensp;1</a>
+				
+	
+			</div>
+			
+			<!-- Daftar Halaman -->
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#tentang">Tentang</a></li>
+					<li><a href="#aplikasi">Aplikasi</a></li>
+					<li><a href="#tim">Tim</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Bagian Halaman (Informasi) -->
+	<div id="tentang" class="container-fluid">
+		<div class="row">
+			<div class="col-md-6">
+				<h2>CIC</h2>
+				<h4>Cifar-10 Image Classification</h4><br>
+				<p style="text-align: justify;text-justify: inter-word;">
+					Aplikasi ini dibuat khusus untuk mendeteksi sebuah objek dari gambar yang diberikan.
+					Adapun dataset yang digunakan untuk model klasifikasi gambar ini adalah CIFAR-10. 
+					Pada dataset CIFAR-1, terdapat 10 objek yang dapat diklasifikasi yaitu pesawat, mobil, burung, kucing,
+					rusa, anjing, katak, kuda, kapal, dan truk.
+					Untuk dapat menggunakan aplikasi ini, pengguna hanya mengunggah sebuah gambar dengan format 'JPG'. 
+					Hasil deteksi objek akan ditampilkan setelah pengguna mengunggah gambar tersebut.
+				</p>
+				<br>
+
+				<!-- Tombol Coba Aplikasi -->
+				<nav id="navgo" class="navbar" style="background-color:#ffffff;z-index: 0;">
+					<ul class="nav nav-pills">
+						<li class="nav-item">
+							<a class="btn btn-default btn-lg" href="#aplikasi" style="background-color:#038a98d8">Coba Aplikasi</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+				
+			<div class="col-md-6">
+			<br>
+			<br>
+				<!-- Gambar Deskripsi Aplikasi -->
+				<div align="right" style="background-color:#ffffff;z-index: 0;">
+					<img src={{ url_for('static', filename='/images/app-display.JPG') }} height="300" ></img>
+				</div>
+			</div>
+		</div>
+		<br>
+	</div>
+
+	<!-- Bagian Halaman (Aplikasi) -->
+
+	<div align="center" id="aplikasi" data-bs-spy="scroll" data-bs-target="#navgo" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+		
+		<div class="row">
+			<div class="col-lg-12 mt-8 mt-lg-12">
+				<h2>Aplikasi</h2>
+				<br>
+				<div>
+					<form>
+						<!-- Input atau Upload Gambar dari Pengguna -->
+						<img src={{ url_for('static', filename='/images/ex-upload.JPG') }} width="400" ></img>
+						<p>Silakan upload sebuah gambar dan lakukan prediksi melalui tombol di bawah.</p>
+						<input type="file" id="input_gambar" name="file">
+						<br>
+						<button type="submit" id="prediksi_submit" class="btn">Prediksi Gambar</button>
+					</form>
+				</div>
+			</div>
+
+			<!-- <div class="col-sm-6"> -->
+				<!-- Bagian Halaman untuk Hasil Prediksi -->
+				<!-- <div id="hasil_prediksi" align="center"> -->
+					<!-- Hasil Prediksi akan ditampilkan di sini-->
+				<!-- </div>
+			</div> -->
+		
+		</div>
+		
+	</div>
+
+	<!-- Bagian Halaman (Anggota Kelompok) -->
+	<div id="tim" class="container-fluid text-center">
+		<br>
+		<h2>Tim</h2>
+		<h4><b>Anggota Tim ASIMO 1</b></h4>
+		<br>
+		<div class="row slideanim">
+			<div class="col-sm-4">
+				<i class="fa fa-user" aria-hidden="true" style="font-size: 50px; color: #038a98d8;"></i>
+				<h4>Indah Zahrani Lubis</h4>
+				<p>Universitas Sumatera Utara</p>
+			</div>
+			<div class="col-sm-4">
+				<i class="fa fa-user" aria-hidden="true" style="font-size: 50px; color: #038a98d8;"></i>
+				<h4>Aster Happy Lestari</h4>
+				<p>Politeknik Negeri Padang</p>
+			</div>
+			<div class="col-sm-4">
+				<i class="fa fa-user" aria-hidden="true" style="font-size: 50px; color: #038a98d8;"></i>
+				<h4>Dinda Ramadhanty Niigata</h4>
+				<p>Universitas Budi Luhur</p>
+			</div>
+		</div>
+	    <br>
+	    <div class="row slideanim">
+			<div class="col-sm-6">
+				<i class="fa fa-user" aria-hidden="true" style="font-size: 50px; color: #038a98d8;"></i>
+				<h4>Syifa Aqilla</h4>
+				<p>Politeknik Negeri Padang</p>
+			</div>
+			<div class="col-sm-6">
+				<i class="fa fa-user" aria-hidden="true" style="font-size: 50px; color: #038a98d8;"></i>
+				<h4>Talenta Pardede</h4>
+				<p>Universitas Sumatera Utara</p>
+			</div>
+	    </div>
+	</div>
+	
+	<footer id="footer">
+		<div class="container">
+		  <div class="me-md-auto text-center text-md-start">
+			<a href="#halamanku" title="To Top">
+				<i class="fa fa-chevron-up" aria-hidden="true" style="color: #fff;"></i>
+			</a>
+			<p>
+			  &copy; Copyright 2023 <strong><span><a href="https://orbitfutureacademy.id/">Orbit Future Academy</a></span></strong>
+			</p>
+			<p>
+			  Designed by <span>Asimo 1</span>
+			</p>
+		  </div>
+		</div>
+	</footer><!-- End Footer -->
+
+	<!-- JavaScript untuk Animasi Scroll dan Prediksi Model -->
+	<script  src={{ url_for('static', filename='/js/client_side.js') }}></script>
+
+</body>
+</html>
