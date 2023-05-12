@@ -8,7 +8,7 @@
 # =[Modules dan Packages]========================
 
 from flask import Flask, render_template, request, jsonify
-#from flask_ngrok import run_with_ngrok
+from flask_ngrok import run_with_ngrok
 from werkzeug.utils import secure_filename
 import pandas as pd
 import numpy as np
@@ -104,11 +104,11 @@ if __name__ == '__main__':
 	model.load_weights("model_cifar10_vgg19_tf.h5")
 
 	# Run Flask di lokal
-	app.run(host="localhost", port=5000, debug=True)
+	#app.run(host="localhost", port=5000, debug=True)
 
 	# Run Flask di goole colab
-	# run_with_ngrok(app)
-	# app.run()
+	run_with_ngrok(app)
+	app.run()
 	
 	
 	
